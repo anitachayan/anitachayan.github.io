@@ -10,11 +10,11 @@
 }
 
 .demo-1 .large-header {
-	background-image: url('../img/demo-1-bg.jpg');
+	background-image: url('img/Onbridge.JPG');
 }
 
 .demo-2 .large-header {
-	background-image: url('../img/demo-2-bg.jpg');
+	background-image: url('img/Onbridge.JPG');
 	background-position: center bottom;
 }
 
@@ -41,7 +41,7 @@
 	font-size:98px;
 	font-weight:700;
 }
-.demo-1 .main-title, 
+.demo-1 .main-title,
 .demo-3 .main-title {
 	text-transform: uppercase;
 	font-size: 4.2em;
@@ -62,7 +62,7 @@
 	height: 20vw;
 	min-width: 3.5em;
 	min-height: 3.5em;
-	background: url(../img/deco.svg) no-repeat center center;
+	background: url('img/Onbridge.JPG') no-repeat center center;
 	background-size: cover;
 	position: absolute;
 	top: 50%;
@@ -93,7 +93,7 @@
 }
 
 @media only screen and (max-width : 768px) {
-	.demo-1 .main-title, 
+	.demo-1 .main-title,
 	.demo-3 .main-title,
 	.demo-4 .main-title {
 		font-size: 3em;
