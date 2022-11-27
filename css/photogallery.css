@@ -1,0 +1,61 @@
+/* (A) WHOLE PAGE */
+* { box-sizing: border-box; }
+body { background: #eee; }
+
+/* (B) GALLERY WRAPPER */
+.photogallery {
+  /* (B1) GRID LAYOUT - 3 IMAGES PER ROW */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 30px;
+
+  /* (B2) OPTIONAL WIDTH RESTRICT */
+  max-width: 90%;
+  margin: 10% auto;
+  overflow: visible;
+}
+
+/* (C) GALLERY IMAGES */
+.photogallery img {
+  /* (C1) DIMENSION */
+  width: 80%;
+  height: 100px; /* optional */
+  padding: 10%;
+
+  /* (C2) COLORS */
+  border: 2% solid #ddd;
+  background: #fff;
+
+  /* (C3) IMAGE RESIZE */
+  /* cover | contain | fill | scale-down */
+  object-fit: contain;
+  position: relative;
+}
+
+/* (D) ON SMALL SCREENS - 2 IMAGES PER ROW */
+@media only screen and (max-width: 600px) {
+  .photogallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* (E) OPTIONAL ZOOM ON HOVER */
+.photogallery img:hover {
+  z-index: 9;
+  transform: scale(1.3);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.5s;
+}
+
+/* (F) FULLSCREEN MODE */
+.photogallery img.full {
+  position: fixed;
+  top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100vh;
+  object-fit: fit;
+  background: rgba(0, 0, 0, 0.7);
+}
+.photogallery img.full:hover {
+  z-index: 999;
+  transform: none;
+}
